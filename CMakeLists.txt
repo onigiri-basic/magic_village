@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
-project(testik)
+project(Magic_Village)
 
-add_executable(testik /Users/miran/projects/testik/main.cpp)
+add_executable(test /Users/miran/projects/testik/main.cpp)
