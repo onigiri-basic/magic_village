@@ -1,9 +1,10 @@
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-
+#include <iostream>
+using namespace std;
 int main(void)
 {
     GLFWwindow* window;
-
     /* Initialize the library */
     if (!glfwInit())
         return -1;
@@ -19,6 +20,14 @@ int main(void)
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
+//    инициализация глад
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        cout << "Can't load GLAD" << endl;
+        return -1;
+    }
+    cout << "OpenGL " << GLVersion.major << "." << GLVersion.minor << endl;
+    
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
